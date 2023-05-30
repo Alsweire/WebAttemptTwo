@@ -73,16 +73,16 @@ CategoryPage = async(Id, TitlePage) => {
 }
 
 AlbumPage = (musicAlbum) => {
-    if (musicAlbum != undefined || null){
+    if (musicAlbum){
         document.querySelector('title').innerHTML='';
         document.querySelector('title').innerHTML = musicAlbum.TitleAlbum;
         document.querySelector('main').innerHTML = '';
         if ((musicAlbum.Image != "") && (musicAlbum.Description != ""))
         {
             document.querySelector('main').innerHTML =
-            `<h2>"${album.TitleAlbum}"</h2>
-            <img src="${album.Image}" alt="" width = 100%>
-            <p>${album.Description}</p>
+            `<h2>"${musicAlbum.TitleAlbum}"</h2>
+            <img src="${musicAlbum.Image}" alt="" width = 100%>
+            <p>${musicAlbum.Description}</p>
             <hr>`;
         }
     }
